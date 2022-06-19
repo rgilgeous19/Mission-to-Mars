@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mission to Mars</title>
@@ -9,6 +10,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+
   </head>
   <body>
     <div class="container">
@@ -38,30 +40,16 @@
             src="{{mars.featured_image }}"
             class="img-responsive"
             alt="Responsive image"
-            />
-          </div>
-          <div class="col-md-4">
-              <!--Mars Facts-->
-              <div class="row" id="mars-facts">
-                  <h3>Mars Facts</h3>
-                  {{mars.facts|safe}}
-              </div>
+          />
+        </div>
+        <div class="col-md-4">
+          <!-- Mars Facts -->
+          <div class="row" id="mars-facts">
+            <h4>Mars Facts</h4>
+            {{ mars.facts | safe }}
           </div>
         </div>
-        <!--Section for Mars Hemisphere Images -->
-        <div class="row" id="mars-hemisphere">
-            <div class="col-md-12">
-                <h2><center>Mars Hemispheres</center></h2>
-                {% for hemisphere in mars.hemispheres %}
-                    <div class="col-md-3">
-                        <div class = "thumbnail">
-                            <img src="{{hemisphere.img_url}}"
-                              <h2><b>{{hemisphere.title}}</b></h2>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
+      </div>
     </div>
   </body>
-  </html>
+</html>
